@@ -1,0 +1,20 @@
+name: randomblock
+main: io.github.luckstern.randomblock.main
+version: 1.0
+author: Luckstern
+api-version: 1.16
+commands:
+  randomblock:
+    description: Command to enable and disabled the randomblock function.
+    usage: /<command> [enable|disable]
+    permission: randomblock.randomblock
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  randomblock.*:
+    description: Gives permission for all randomblock commands.
+    children:
+      randomblock.randomblock: false
+  randomblock.randomblock:
+    description: Allows a player to enable and disabled the randomblock function.
+    default: op
